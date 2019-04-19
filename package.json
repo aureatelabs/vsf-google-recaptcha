@@ -1,0 +1,26 @@
+{
+    "name": "vsf-google-recaptcha",
+    "version": "1.0.0",
+    "description": "Google reacaptcha module for Vue Storefront",
+    "main": "index.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aureatelabs/vsf-google-recaptcha.git"
+    },
+    "keywords": [
+      "Vue",
+      "Storefront",
+      "Google Recaptcha",
+      "Captcha",
+      "Vue storefront captcha"
+    ],
+    "author": "Piyush <piyush@aureatelabs.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/aureatelabs/vsf-google-recaptcha/issues"
+    },
+    "homepage": "https://github.com/aureatelabs/vsf-google-recaptcha#readme"
+  }
