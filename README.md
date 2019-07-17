@@ -65,7 +65,7 @@ if (!this.$store.state.googleRecaptcha.is_verified) {
 Thats it! It's easy, plug and play! If you haven't got an Register captcha already, you can create one here, there is free tier that you can use to get started: https://www.google.com/recaptcha/admin/create
 
 ## Customization
-###Replacing the Google captcha Script.
+### Replacing the Google captcha Script.
 If you need to change the Intercom script that is loaded on the page, open up the `./google-recaptcha/hooks/afterRegistration.ts` file. On line 35 you'll find the script provided from Google Recaptcha, you can swap this out or extend it as required.
 
 
