@@ -37,7 +37,7 @@ Replace the `site_key` & `secret_key` parameter with the site key & secret key p
 <br />
 Valid site_key example: `"site_key": "6Lcn_Z0UAAAAAN4LdRSfM5eNd3LJ-xPfUtnV6Lud"`
 <br />
-Valid secret_key example: `"secret_key": "6Lcn_Z0UAAAAACodWP8oU9wcdVKatvQVBqklWA8q"`
+Valid secret_key example: `"secret_key": "6Lcn_Z0UAAAAACodWP8oU9wcdVKatvQVBqklWA9c"`
 
 ### 3. Register the Google Recaptcha module
 Open up your `../vue-storefront/src/modules/index.ts` and add the following code. Adding it inside this file the registers the module so it can be used in your Vue Storefront.
@@ -62,10 +62,12 @@ if (!this.$store.state.googleRecaptcha.is_verified) {
 }
 ```
 ### 5. Enjoy!
-Thats it! It's easy, plug and play! If you havn't got an Register captcha already, you can create one here, there is free tier that you can use to get started: https://www.google.com/recaptcha/admin/create
+Thats it! It's easy, plug and play! If you haven't got an Register captcha already, you can create one here, there is free tier that you can use to get started: https://www.google.com/recaptcha/admin/create
 
 ## Customization
-Comming soon.
+###Replacing the Google captcha Script.
+If you need to change the Intercom script that is loaded on the page, open up the `./google-recaptcha/hooks/afterRegistration.ts` file. On line 35 you'll find the script provided from Google Recaptcha, you can swap this out or extend it as required.
+
 
 ## License
 
