@@ -61,7 +61,37 @@ if (!this.$store.state.googleRecaptcha.is_verified) {
     //captcha is not verified
 }
 ```
-### 5. Enjoy!
+
+### 5. Now, Clone google Recaptcha API extension to your local vue-storefront-api
+Copy extension to your /path/to/vue-storefront-api/src/api/extensions/
+<br />
+```shell
+$ cp -f ./API/google-recaptcha /path/to/vue-storefront-api/src/api/extensions/
+```
+
+### 6. Add the module config to your local VSF API's configuration file
+Add the following JSON config snippet into your desired config, eg. `config/local.json`
+```json
+"googleRecaptcha" : {
+  "tokens" : {
+      "secret_key": "<YOUR_CAPTCHA_SECRET_KEY>"
+  },
+  "score_match": {
+    "enable": false,
+    "low_score": 0.9
+  }
+}
+```
+Replace the `secret_key` parameter with the secret key provided by Google recaptcha registration time. You can find your Captcha Site Key here: https://www.google.com/recaptcha/admin/. Setting `enable` to `true` will check the captcha base on the score response from the google captcha api. To disable score match simple set value to `false`. Possible values for `low_score` is `0.0` to `0.9`.
+<br />
+Valid secret_key example: `"secret_key": "6Lcn_Z0UAAAAACodWP8oU9wcdVKatvQVBqklWA9c"`
+<br />
+sample response of api call `/api/ext/google-recaptcha/is-verify`
+```
+{ success: false, error: 'Invalid captcha found.' }
+```
+
+### 7. Enjoy!
 Thats it! It's easy, plug and play! If you haven't got an Register captcha already, you can create one here, there is free tier that you can use to get started: https://www.google.com/recaptcha/admin/create
 
 ## Customization
@@ -72,4 +102,4 @@ If you need to change the Intercom script that is loaded on the page, open up th
 ## License
 
 <br/>
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the ![LICENSE](LICENSE) file for details.
