@@ -102,4 +102,4 @@ If you need to change the Intercom script that is loaded on the page, open up th
 ## License
 
 <br/>
-This project is licensed under the MIT License - see the ![LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License.
