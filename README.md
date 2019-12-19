@@ -26,6 +26,7 @@ Add the following JSON config snippet into your desired config, eg. `config/loca
        "site_key": "<YOUR_CAPTCHA_SITE_KEY>",
        "secret_key": "<YOUR_CAPTCHA_SECRET_KEY>"
    },
+   "endpoint": "/api/ext/google-recaptcha/is-verify",
    "is_active": false
 }
 ```

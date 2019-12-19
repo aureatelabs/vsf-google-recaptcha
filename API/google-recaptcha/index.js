@@ -23,15 +23,16 @@ module.exports = ({ config }) => {
     }, function (_err, _res, _resBody) {
       let returnData = { success: false, error: 'Invalid captcha found.' };
       if (_resBody && _resBody.success && _resBody.success === true) {
-        if (config.googleRecaptcha.score_match.enable && _resBody.score < config.googleRecaptcha.score_match.low_score) {
-          return apiStatus(res, returnData, 200)
+        if (config.googleRecaptcha.score_match.enable) {
+          if (_resBody.score < config.googleRecaptcha.score_match.low_score) {
+            returnData = _resBody;
+          }
+        } else {
+          returnData = _resBody;
         }
-        returnData = _resBody;
         return apiStatus(res, returnData, 200)
       }
       return apiStatus(res, returnData, 200)
-    }).catch((err) => {
-      console.error(err)
     })
   })
 
