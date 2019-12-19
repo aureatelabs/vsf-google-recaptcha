@@ -24,7 +24,7 @@ module.exports = ({ config }) => {
       let returnData = { success: false, error: 'Invalid captcha found.' };
       if (_resBody && _resBody.success && _resBody.success === true) {
         if (config.googleRecaptcha.score_match.enable) {
-          if (_resBody.score < config.googleRecaptcha.score_match.low_score) {
+          if (_resBody.score > config.googleRecaptcha.score_match.low_score) {
             returnData = _resBody;
           }
         } else {
