@@ -11,8 +11,8 @@ export function afterRegistration({ Vue, config, store, isServer }): any {
         Logger.warn('Google captcha module is disabled.', 'Google Recaptcha')();
         return;
     }
-    if( !config.googleRecaptcha.tokens || !config.googleRecaptcha.tokens.site_key || !config.googleRecaptcha.tokens.secret_key ) {
-        Logger.warn('No google captcha config or captcha site_key or captcha secret_key found.', 'Google Recaptcha')();
+    if( !config.googleRecaptcha.tokens || !config.googleRecaptcha.tokens.site_key ) {
+        Logger.warn('No google captcha config or captcha site_key found.', 'Google Recaptcha')();
         return;
     }
   }

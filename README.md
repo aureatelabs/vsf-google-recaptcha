@@ -23,17 +23,16 @@ Add the following JSON config snippet into your desired config, eg. `config/loca
 ```json
 "googleRecaptcha" : {
    "tokens" : {
-       "site_key": "<YOUR_CAPTCHA_SITE_KEY>",
-       "secret_key": "<YOUR_CAPTCHA_SECRET_KEY>"
+       "site_key": "<YOUR_CAPTCHA_SITE_KEY>"
    },
    "endpoint": "/api/ext/google-recaptcha/is-verify",
    "is_active": false
 }
 ```
-Replace the `site_key` & `secret_key` parameter with the site key & secret key provided by Google reCAPTCHA registration time. You can find your Captcha Site Key here: https://www.google.com/recaptcha/admin/. Setting `is_active` to `false` will disable the google reCAPTCHA extension at runtime.
+Replace the `site_key` parameter with the site key & secret key provided by Google reCAPTCHA registration time. You can find your Captcha Site Key here: https://www.google.com/recaptcha/admin/. Setting `is_active` to `false` will disable the google reCAPTCHA extension at runtime.
 
 Valid site_key example: `"site_key": "6Lcn_Z0UAAAAAN4LdRSfM5eNd3LJ-xPfUtnV6Lud"`
-Valid secret_key example: `"secret_key": "6Lcn_Z0UAAAAACodWP8oU9wcdVKatvQVBqklWA9c"`
+
 ### 3. Register the Google reCAPTCHA extension
 Open up your `../vue-storefront/src/modules/index.ts` and add the following code. Adding it inside this file the registers the extension so it can be used in your Vue Storefront.
 ```js
